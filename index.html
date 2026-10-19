@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puff Fluffy Adventure</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puff Fluffy Adventure</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+  <main class="game-card">
+    <header class="top-bar">
+      <h1>Puff Fluffy Adventure!</h1>
+      <div class="hud">
+        <span>Score: <strong id="score">0</strong></span>
+        <span id="lives" aria-label="Lives left"></span>
+      </div>
+    </header>
+
+    <div class="stage">
+      <canvas id="game" width="800" height="500"></canvas>
+
+      <!-- Start, game over and win screen (overlay) -->
+      <div id="overlay" class="overlay">
+        <h2 id="overlay-title">Walk your pup!</h2>
+        <p id="overlay-text">Run to the flag. Your pup fetches treats and hits bugs.</p>
+        <button id="start-btn">Start game</button>
+      </div>
+    </div>
+
+    <footer class="help">
+      <span><kbd>A</kbd><kbd>D</kbd> move &nbsp; <kbd>W</kbd> / <kbd>Space</kbd> jump</span>
+      <span><kbd>Click</kbd> to send your pup (limited range)</span>
+    </footer>
+  </main>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
